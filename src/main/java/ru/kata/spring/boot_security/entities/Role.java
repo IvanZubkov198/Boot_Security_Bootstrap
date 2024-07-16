@@ -64,7 +64,6 @@ public class Role {
 
     @Override
     public String toString() {
-//        return name.substring(name.lastIndexOf("_") + 1);
         return "Role{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
