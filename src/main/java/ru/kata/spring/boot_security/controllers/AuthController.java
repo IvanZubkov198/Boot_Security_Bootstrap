@@ -1,5 +1,6 @@
 package ru.kata.spring.boot_security.controllers;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -16,18 +17,12 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/auth")
+@RequiredArgsConstructor
 public class AuthController {
 
     private final UserValidator userValidator;
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
-
-    @Autowired
-    public AuthController(UserValidator userValidator, UserService userService, PasswordEncoder passwordEncoder) {
-        this.userValidator = userValidator;
-        this.userService = userService;
-        this.passwordEncoder = passwordEncoder;
-    }
 
     @GetMapping("/login")
     public String loginPage() {
