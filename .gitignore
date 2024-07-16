@@ -7,3 +7,4 @@ gen
 .mvn
 *.cmd
 /.mvn/
+mvnw
