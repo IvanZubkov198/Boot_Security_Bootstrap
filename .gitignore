@@ -3,7 +3,6 @@ out
 gen
 /target/
 .idea/
-*.properties
 .mvn
 *.cmd
 /.mvn/
